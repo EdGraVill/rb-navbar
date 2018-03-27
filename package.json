@@ -1,0 +1,46 @@
+{
+  "name": "rb-navbar",
+  "version": "0.1.0",
+  "description": "react-basics nav component",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EdGraVill/rb-navbar.git"
+  },
+  "keywords": [
+    "react",
+    "basics",
+    "react-basics",
+    "nav",
+    "navbar",
+    "links",
+    "menu"
+  ],
+  "author": "Eduardo Grajales Villanueva @EdGraVill",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/EdGraVill/rb-navbar/issues"
+  },
+  "homepage": "https://github.com/EdGraVill/rb-navbar#readme",
+  "devDependencies": {
+    "babel-eslint": "^8.2.2",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-flowtype": "^2.46.1",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.7.0",
+    "flow-bin": "^0.68.0",
+    "jest": "^22.4.3"
+  },
+  "peerDependencies": {
+    "react": "^16.2.0"
+  },
+  "dependencies": {
+    "font-awesome": "^4.7.0",
+    "react-device-detect": "^1.0.0"
+  }
+}
