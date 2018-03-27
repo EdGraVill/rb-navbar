@@ -2,7 +2,7 @@
 import React from 'react';
 import { isMobile } from 'react-device-detect';
 
-import 'font-awesome/css/font-awesome.min.css';
+import './node_modules/font-awesome/css/font-awesome.min.css';
 import './nav.css';
 
 import Brand from './Brand';

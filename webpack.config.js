@@ -17,42 +17,15 @@ module.exports = {
         presets: ['env', 'react', 'flow', 'stage-2'],
       },
     }, {
-      test: /\.less$/,
-      use: [{
-        loader: 'style-loader',
-      }, {
-        loader: 'css-loader',
-      }, {
-        loader: 'less-loader',
-      }],
-    }, {
       test: /\.css$/,
       use: [
         { loader: 'style-loader' },
         { loader: 'css-loader' },
       ],
     }, {
-      test: /\.(ttf)$/,
-      loader: 'url-loader',
+      test: /\.(ttf|eot|svg)$/,
+      loader: 'file-loader',
       options: {
-        limit: 50000,
-        mimetype: 'application/font-ttf',
-        name: 'fonts/[name].[ext]',
-      },
-    }, {
-      test: /\.(eot)$/,
-      loader: 'url-loader',
-      options: {
-        limit: 50000,
-        mimetype: 'application/font-eot',
-        name: 'fonts/[name].[ext]',
-      },
-    }, {
-      test: /\.(svg)$/,
-      loader: 'url-loader',
-      options: {
-        limit: 50000,
-        mimetype: 'application/font-svg',
         name: 'fonts/[name].[ext]',
       },
     }, {
