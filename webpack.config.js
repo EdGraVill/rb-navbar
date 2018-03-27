@@ -23,9 +23,17 @@ module.exports = {
         { loader: 'css-loader' },
       ],
     }, {
-      test: /\.(ttf|eot|woff|woff2|svg)$/,
+      test: /\.(ttf|eot|svg)$/,
       loader: 'file-loader',
       options: {
+        name: 'fonts/[name].[ext]',
+      },
+    }, {
+      test: /\.(woff|woff2)(\?v=\d+\.\d+\.\d+)?$/,
+      loader: 'url-loader',
+      options: {
+        limit: 50000,
+        mimetype: 'application/font-woff',
         name: 'fonts/[name].[ext]',
       },
     }],
