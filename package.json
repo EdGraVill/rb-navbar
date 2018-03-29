@@ -1,6 +1,6 @@
 {
   "name": "rb-navbar",
-  "version": "0.5.0",
+  "version": "1.0.0",
   "description": "react-basics nav component",
   "main": "dist/index.js",
   "scripts": {
@@ -27,8 +27,14 @@
   },
   "homepage": "https://github.com/EdGraVill/rb-navbar#readme",
   "devDependencies": {
+    "babel-core": "^6.26.0",
     "babel-eslint": "^8.2.2",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-flow": "^6.23.0",
+    "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
+    "css-loader": "^0.28.11",
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-plugin-flowtype": "^2.46.1",
@@ -40,24 +46,17 @@
     "jest": "^22.4.3",
     "less": "^3.0.1",
     "less-loader": "^4.1.0",
+    "path": "^0.12.7",
+    "style-loader": "^0.20.3",
     "url-loader": "^1.0.1",
+    "webpack": "^4.3.0",
     "webpack-cli": "^2.0.13"
   },
   "peerDependencies": {
     "react": "^16.2.0"
   },
   "dependencies": {
-    "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.4",
-    "babel-preset-env": "^1.6.1",
-    "babel-preset-flow": "^6.23.0",
-    "babel-preset-react": "^6.24.1",
-    "css-loader": "^0.28.11",
     "font-awesome": "^4.7.0",
-    "font-awesome-webpack": "^0.0.5-beta.2",
-    "path": "^0.12.7",
-    "react-device-detect": "^1.0.0",
-    "style-loader": "^0.20.3",
-    "webpack": "^4.3.0"
+    "react-device-detect": "^1.0.0"
   }
 }
