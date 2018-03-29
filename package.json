@@ -1,0 +1,62 @@
+{
+  "name": "rb-navbar",
+  "version": "1.0.0",
+  "description": "react-basics nav component",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "jest",
+    "build": "webpack -p"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EdGraVill/rb-navbar.git"
+  },
+  "keywords": [
+    "react",
+    "basics",
+    "react-basics",
+    "nav",
+    "navbar",
+    "links",
+    "menu"
+  ],
+  "author": "Eduardo Grajales Villanueva @EdGraVill",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/EdGraVill/rb-navbar/issues"
+  },
+  "homepage": "https://github.com/EdGraVill/rb-navbar#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.2.2",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-flow": "^6.23.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "css-loader": "^0.28.11",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-flowtype": "^2.46.1",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.7.0",
+    "file-loader": "^1.1.11",
+    "flow-bin": "^0.68.0",
+    "jest": "^22.4.3",
+    "less": "^3.0.1",
+    "less-loader": "^4.1.0",
+    "path": "^0.12.7",
+    "style-loader": "^0.20.3",
+    "url-loader": "^1.0.1",
+    "webpack": "^4.3.0",
+    "webpack-cli": "^2.0.13"
+  },
+  "peerDependencies": {
+    "react": "^16.2.0"
+  },
+  "dependencies": {
+    "font-awesome": "^4.7.0",
+    "react-device-detect": "^1.0.0"
+  }
+}
