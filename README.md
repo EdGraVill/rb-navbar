@@ -215,7 +215,7 @@ const userBox = {
 
 ## Collaborators
 
-- <img src="https://avatars0.githubusercontent.com/u/16921957?s=460&v=4" style="height: 22px; width: auto; " alt="EdGraVill"> Eduardo Grajales Villanueva @EdGraVill
+- Eduardo Grajales Villanueva @EdGraVill
 
 > If you want to collaborate with this or another exist or new component inside React Basics, first do a pull request and then email me: edgravill@gmail.com
 
