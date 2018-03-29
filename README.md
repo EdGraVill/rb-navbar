@@ -215,7 +215,7 @@ const userBox = {
 
 ## Collaborators
 
-- <img src="https://avatars0.githubusercontent.com/u/16921957?s=460&v=4" style="height: 22px; width: auto; " alt="EdGraVill"> Eduardo Grajales Villanueva @EdGraVill
+- Eduardo Grajales Villanueva @EdGraVill
 
 > If you want to collaborate with this or another exist or new component inside React Basics, first do a pull request and then email me: edgravill@gmail.com
 
@@ -233,7 +233,7 @@ yarn build
 
 Once you're a collaborator don't forget 3 rules:
 
-1. Version are `Mayor` (If APIs are deleted or create new one) `.` `Medium` (If APIs changes without changing name) `.` `Minimum` (If do some hotfix or related). This is because all 1.x.x are compatible, but are incompatible with 2.x.x
+1. Version are `Mayor` (If APIs are deleted or create new one) `.` `Medium` (If APIs changes without changing name) `.` `Minimum` (If do some hotfix, change Documentation or develop configurations). This is because all 1.x.x are compatible, but are incompatible with 2.x.x
 2. Build a great components and do the best documentation as you can.
 3. Share with your developer friends. It would be useful for them.
 
