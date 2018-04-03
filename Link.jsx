@@ -2,7 +2,7 @@
 import React, { Fragment } from 'react';
 
 type PropsType = {
-  anchorComponent: ?React$Element<any>,
+  AnchorComponent: ?React$Component<any>,
   color?: string,
   dropdown?: boolean,
   height?: number,
@@ -14,7 +14,7 @@ type PropsType = {
 };
 
 const Link = ({
-  anchorComponent,
+  AnchorComponent,
   color,
   dropdown,
   height,
@@ -41,11 +41,11 @@ const Link = ({
     </Fragment>
   );
 
-  if (anchorComponent) {
+  if (AnchorComponent) {
     return (
-      <anchorComponent {...props}>
+      <AnchorComponent {...props}>
         <Children />
-      </anchorComponent>
+      </AnchorComponent>
     );
   }
 
