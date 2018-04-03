@@ -10,5 +10,6 @@ module.exports = {
     HTMLElement: true,
     HTMLInputElement: true,
     React$Element: true,
+    React$Component: true,
   }
 };
