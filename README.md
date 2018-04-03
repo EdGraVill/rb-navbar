@@ -98,6 +98,7 @@ const Index = () => (
 
 |Prop|Required|Type|Default|Description|
 |----|--------|----|-------|-----------|
+|anchorComponent|`false`|`React$Element<any>`|`undefined`|Custom anchor component, this is useful when integrates a react router.|
 |backgroundColor|`false`|`string`|`'#4A5459'`|Background of the Navbar.|
 |brand|`false`|`Object`|`undefined`|Object with the brand or company basic information. It just display the info. See [Object definition](#brand) below.|
 |color|`false`|`string`|`'#ecf0f1'`|Color of all fonts in Navbar.|
@@ -208,8 +209,9 @@ const userBox = {
 
 - [x] Mobile tap to open dropdown (Since v1.0.0)
 - [x] SEO support with Schemas.org (Since v1.0.0)
-- [ ] Mobile responsive (Under develop)
+- [x] Support custom anchor tag. For routers (Since v1.1.0)
 - [ ] Integration of other icons (Under develop)
+- [ ] Mobile responsive (Under develop)
 
 > looking for more? - Do a pull request with your proposals ;)
 
@@ -239,7 +241,7 @@ Once you're a collaborator don't forget 3 rules:
 
 Don't forget [join discussion on Slack](https://join.slack.com/t/react-basics/shared_invite/enQtMzM4MDMyNzM5NjgxLTMxYzcwMDMwYmNkZGIxNWFkZGZhMDVmNWU3OTQ3ZDhlYmZhOWU0NTkwMTdkNzg5ZTJhNWE3MDJlNTc3OGU4YjA)
 
-## Licence
+## License
 
 MIT License
 
