@@ -69,13 +69,13 @@ const Dropdown = ({
           dropdown
           anchorRef={(ref) => { linkRef[index] = ref || document.createElement('a'); }}
           style={{
-              pointerEvents: 'none',
-            }}
+            pointerEvents: 'none',
+          }}
           color={color}
         />
         {link.links instanceof Array && link.links.length && link.links.map(lnk => (
           <Link
-            AnchorComponent={link.AnchorComponent}
+            AnchorComponent={lnk.AnchorComponent}
             href={lnk.href}
             title={lnk.title}
             icon={lnk.icon}
@@ -83,7 +83,7 @@ const Dropdown = ({
             key={lnk.href}
             color={color}
           />
-          ))}
+        ))}
       </div>
     );
   }
@@ -110,7 +110,7 @@ const Dropdown = ({
       />
       {link.links instanceof Array && link.links.length && link.links.map(lnk => (
         <Link
-          AnchorComponent={link.AnchorComponent}
+          AnchorComponent={lnk.AnchorComponent}
           href={lnk.href}
           title={lnk.title}
           icon={lnk.icon}
