@@ -98,7 +98,7 @@ const Index = () => (
 
 |Prop|Required|Type|Default|Description|
 |----|--------|----|-------|-----------|
-|anchorComponent|`false`|`React$Element<any>`|`undefined`|Custom anchor component, this is useful when integrates a react router.|
+|AnchorComponent|`false`|`React$Element<any>`|`undefined`|Custom anchor component, this is useful when integrates a react router.|
 |backgroundColor|`false`|`string`|`'#4A5459'`|Background of the Navbar.|
 |brand|`false`|`Object`|`undefined`|Object with the brand or company basic information. It just display the info. See [Object definition](#brand) below.|
 |color|`false`|`string`|`'#ecf0f1'`|Color of all fonts in Navbar.|

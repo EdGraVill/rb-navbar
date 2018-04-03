@@ -4,7 +4,7 @@ import React from 'react';
 import Link from './Link';
 
 type PropsType = {
-  anchorComponent: ?React$Element<any>,
+  AnchorComponent: ?React$Component<any>,
   backgroundColor?: string,
   color?: string,
   height?: number,
@@ -23,7 +23,7 @@ type PropsType = {
 };
 
 const Dropdown = ({
-  anchorComponent,
+  AnchorComponent,
   backgroundColor,
   color,
   height,
@@ -61,7 +61,7 @@ const Dropdown = ({
         tabIndex={index}
       >
         <Link
-          anchorComponent={anchorComponent}
+          AnchorComponent={AnchorComponent || null}
           href={link.href}
           title={link.title}
           icon={link.icon}
@@ -75,7 +75,7 @@ const Dropdown = ({
         />
         {link.links instanceof Array && link.links.length && link.links.map(lnk => (
           <Link
-            anchorComponent={anchorComponent}
+            AnchorComponent={AnchorComponent}
             href={lnk.href}
             title={lnk.title}
             icon={lnk.icon}
@@ -100,7 +100,7 @@ const Dropdown = ({
       ref={(ref) => { linksContainer[index] = ref || document.createElement('div'); }}
     >
       <Link
-        anchorComponent={anchorComponent}
+        AnchorComponent={AnchorComponent}
         dropdown
         href={link.href}
         title={link.title}
@@ -110,7 +110,7 @@ const Dropdown = ({
       />
       {link.links instanceof Array && link.links.length && link.links.map(lnk => (
         <Link
-          anchorComponent={anchorComponent}
+          AnchorComponent={AnchorComponent}
           href={lnk.href}
           title={lnk.title}
           icon={lnk.icon}
@@ -118,7 +118,7 @@ const Dropdown = ({
           key={lnk.href}
           color={color}
         />
-        ))}
+      ))}
     </div>
   );
 };
