@@ -2,7 +2,7 @@
 import React, { Fragment } from 'react';
 
 type PropsType = {
-  AnchorComponent: ?React$Component<any>,
+  AnchorComponent: ?React$Element<any>,
   color?: string,
   dropdown?: boolean,
   height?: number,
@@ -42,11 +42,7 @@ const Link = ({
   );
 
   if (AnchorComponent) {
-    return (
-      <AnchorComponent {...props}>
-        <Children />
-      </AnchorComponent>
-    );
+    return React.cloneElement(AnchorComponent, { ...props, children: <Children /> });
   }
 
   return (
