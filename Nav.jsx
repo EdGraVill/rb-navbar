@@ -12,6 +12,7 @@ import Search from './Search';
 import UserBox from './UserBox';
 
 type PropsType = {
+  anchorComponent: ?React$Element<any>,
   backgroundColor?: string,
   brand: ?{
     name?: string,
@@ -46,13 +47,14 @@ type PropsType = {
 };
 
 const Nav = ({
-  backgroundColor = '#4A5459',
+  anchorComponent,
+  backgroundColor,
   brand,
-  color = '#ecf0f1',
-  height = 48,
+  color,
+  height,
   links,
   search,
-  style = {},
+  style,
   userBox,
 } : PropsType) => {
   let h: number = height || 64;
@@ -71,11 +73,19 @@ const Nav = ({
         )}
         <div className="rbnav__navbar">
           {!links && links instanceof Array && !links.length ? (
-            <Link href="/" title="Inicio" icon="home" height={h} color={color} />
+            <Link
+              anchorComponent={anchorComponent}
+              href="/"
+              title="Inicio"
+              icon="home"
+              height={h}
+              color={color}
+            />
           ) : links instanceof Array && links.map((link, i) => {
             if (!link.links || (link.links instanceof Array && !link.links.length)) {
               return (
                 <Link
+                  anchorComponent={anchorComponent}
                   href={link.href}
                   title={link.title}
                   icon={link.icon}
@@ -88,6 +98,7 @@ const Nav = ({
 
             return (
               <Dropdown
+                anchorComponent={anchorComponent}
                 backgroundColor={backgroundColor}
                 color={color}
                 height={h}

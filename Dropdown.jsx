@@ -4,6 +4,7 @@ import React from 'react';
 import Link from './Link';
 
 type PropsType = {
+  anchorComponent: ?React$Element<any>,
   backgroundColor?: string,
   color?: string,
   height?: number,
@@ -22,15 +23,16 @@ type PropsType = {
 };
 
 const Dropdown = ({
-  backgroundColor = '#4A5459',
-  color = '#ecf0f1',
-  height = 48,
+  anchorComponent,
+  backgroundColor,
+  color,
+  height,
   index,
-  isMobile = false,
+  isMobile,
   link,
 }: PropsType) => {
   const linksContainer: Array<HTMLDivElement> = [];
-  const linkRef: Array<HTMLAnchorElement> = [];
+  const linkRef: Array<HTMLAnchorElement | HTMLElement> = [];
 
   if (isMobile) {
     return (
@@ -38,18 +40,18 @@ const Dropdown = ({
         className="rbnav__linksContainer"
         style={{ backgroundColor, height }}
         onClick={() => {
-          linksContainer[index].style.height = `${(Number(link.links instanceof Array && link.links.length) + 1) * height}px`;
+          linksContainer[index].style.height = `${(Number(link.links instanceof Array && link.links.length) + 1) * (height || 0)}px`;
           linkRef[index].style.pointerEvents = 'auto';
         }}
         onMouseLeave={() => {
-          linksContainer[index].style.height = `${height}px`;
+          linksContainer[index].style.height = `${(height || 0)}px`;
           linkRef[index].style.pointerEvents = 'none';
         }}
         onKeyDown={(event) => {
           const { keyCode } = event;
 
           if (keyCode === 8) {
-            linksContainer[index].style.height = `${height}px`;
+            linksContainer[index].style.height = `${(height || 0)}px`;
             linkRef[index].style.pointerEvents = 'none';
           }
         }}
@@ -59,6 +61,7 @@ const Dropdown = ({
         tabIndex={index}
       >
         <Link
+          anchorComponent={anchorComponent}
           href={link.href}
           title={link.title}
           icon={link.icon}
@@ -72,6 +75,7 @@ const Dropdown = ({
         />
         {link.links instanceof Array && link.links.length && link.links.map(lnk => (
           <Link
+            anchorComponent={anchorComponent}
             href={lnk.href}
             title={lnk.title}
             icon={lnk.icon}
@@ -89,13 +93,14 @@ const Dropdown = ({
       className="rbnav__linksContainer"
       style={{ backgroundColor, height }}
       onMouseEnter={() => {
-        linksContainer[index].style.height = `${(Number(link.links instanceof Array && link.links.length) + 1) * height}px`;
+        linksContainer[index].style.height = `${(Number(link.links instanceof Array && link.links.length) + 1) * (height || 0)}px`;
       }}
-      onMouseLeave={() => { linksContainer[index].style.height = `${height}px`; }}
+      onMouseLeave={() => { linksContainer[index].style.height = `${(height || 0)}px`; }}
       key={link.href}
       ref={(ref) => { linksContainer[index] = ref || document.createElement('div'); }}
     >
       <Link
+        anchorComponent={anchorComponent}
         dropdown
         href={link.href}
         title={link.title}
@@ -105,6 +110,7 @@ const Dropdown = ({
       />
       {link.links instanceof Array && link.links.length && link.links.map(lnk => (
         <Link
+          anchorComponent={anchorComponent}
           href={lnk.href}
           title={lnk.title}
           icon={lnk.icon}
